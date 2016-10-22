@@ -3,5 +3,10 @@
 body {
   /* Rectangle: */
   font-family: "Roboto", 'sans-serif';
-  padding: 50px !important;
+  height: 100%;
+  width: 100%;
+  background-image: url("../images/fondo01.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
 }

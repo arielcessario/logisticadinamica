@@ -404,6 +404,8 @@
                 'bower_components/oclazyload/dist/ocLazyLoad.min.js',
                 //'bower_components/angular-cookies/angular-cookies.min.js',
                 'bower_components/angular-animate/angular-animate.min.js',
+                'bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
+                'bower_components/angular-bootstrap/ui-bootstrap.js',
                 '//cdn.auth0.com/js/lock-7.9.min.js',
                 '//cdn.auth0.com/w2/auth0-angular-4.min.js',
                 'bower_components/angular-jwt/dist/angular-jwt.min.js',
@@ -437,7 +439,19 @@
     if (raf) raf(cb);
     else window.addEventListener('load', cb);
   </script>
-
+  <script>
+    var cb = function () {
+      var l = document.createElement('link');
+      l.rel = 'stylesheet';
+      l.href = 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css';
+      var h = document.getElementsByTagName('head')[0];
+      h.parentNode.insertBefore(l, h);
+    };
+    var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+            webkitRequestAnimationFrame || msRequestAnimationFrame;
+    if (raf) raf(cb);
+    else window.addEventListener('load', cb);
+  </script>
 </head>
 <body ng-controller="AppCtrl as appCtrl">
 <div ng-if="!appCtrl.hideLoader" id="ac-loader">
@@ -498,9 +512,37 @@
 </div>
 
 
+<nav class="navbar navbar-default">
+  <div class="container-fluid" >
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" ng-click="appCtrl.toggleCollapse()">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Logistica Dinamica</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="navbar-collapse" style="overflow:hidden!important;" uib-collapse="appCtrl.isCollapsed">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Dinamica <span class="sr-only">(current)</span></a></li>
+        <li><a href="#!/empresa">Empresa</a></li>
+        <li><a href="#!/servicios">Servicios</a></li>
+        <li><a href="#!/alcance">Alcance</a></li>
+        <li><a href="#!/deposito">Deposito</a></li>
+        <li><a href="#!/contacto">Contacto</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 
 
+<!-- contenido -->
 <div ng-view></div>
+
 
 </body>
 </html>
