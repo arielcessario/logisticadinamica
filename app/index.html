@@ -512,38 +512,59 @@
 </div>
 
 
-<nav class="navbar navbar-default">
-  <div class="container-fluid" >
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" ng-click="appCtrl.toggleCollapse()">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Logistica Dinamica</a>
+<div class="header-logistica">
+  <div class="col-sm-12 col-xs-12 col-lg-12 col-md-12">
+    <div class="row col-lg-7 col-lg-offset-1 col-md-offset-1 col-md-8 col-sm-8 ">
+      <img src="./images/logo-md-07.png" alt="" style="top: 10px; position: relative; height: 80px; width: auto;"
+           class="logoMediaAndrea col-lg-4 col-md-4 col-xs-12 col-sm-4 "/>
+      <p class="logo-title col-lg-8 col-md-8 col-xs-12 col-sm-4"
+         style="margin-top: 15px; white-space: nowrap;">
+        Logística Promocional
+      </p>
     </div>
+    <div class="row  col-lg-3 col-lg-offset-1 col-md-3 socialHeaderAndrea col-xs-12 col-sm-4 ">
+      <img src="./images/Social-Truck_fb2.png" class="social-logistica" alt=""/>
+      <img src="./images/Social-Truck_li2.png" class="social-logistica" alt=""/>
+      <img src="./images/Social-Truck_twi.png" class="social-logistica" alt=""/>
+    </div>
+  </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="navbar-collapse" style="overflow:hidden!important;" uib-collapse="appCtrl.isCollapsed">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Dinamica <span class="sr-only">(current)</span></a></li>
-        <li><a href="#!/empresa">Empresa</a></li>
-        <li><a href="#!/servicios">Servicios</a></li>
-        <li><a href="#!/alcance">Alcance</a></li>
-        <li><a href="#!/deposito">Deposito</a></li>
-        <li><a href="#!/contacto">Contacto</a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+  <nav class="navbar navbar-default gradient-header">
+    <div class="container-fluid" >
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" ng-click="appCtrl.toggleCollapse()">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <!--<a class="navbar-brand" href="#">Logistica Dinamica</a>-->
+      </div>
 
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="navbar-collapse" style="overflow:hidden!important;" uib-collapse="appCtrl.isCollapsed">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Dinamica <span class="sr-only">(current)</span></a></li>
+          <li><a href="#!/empresa">Empresa</a></li>
+          <li><a href="#!/servicios">Servicios</a></li>
+          <li><a href="#!/alcance">Alcance</a></li>
+          <li><a href="#!/deposito">Deposito</a></li>
+          <li><a href="#!/contacto">Contacto</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+</div>
 
 <!-- contenido -->
-<div ng-view class="container"></div>
+<div id="wrap">
+  <div id="main">
+    <div ng-view class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12 col-xs-12"></div>
+  </div>
+</div>
 
-
+<!--
 <footer class="footer">
   <div class="container">
     <p class="text-muted"><span style="font-weight: bold;">ARG (+54 11) 1010 0101 </span> <br>
@@ -551,7 +572,7 @@
       Copyright © 2014 Dinamica Logistica - Ariel Cessario. All rights reserved. </p>
   </div>
 </footer>
-
+-->
 
 </body>
 </html>

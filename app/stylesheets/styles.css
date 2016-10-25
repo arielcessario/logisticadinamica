@@ -11,14 +11,74 @@ body {
   background-size: 100% 100%;
 }
 
-/* line 30, ../sass/styles.scss */
+/* line 26, ../sass/styles.scss */
+.header-logistica {
+  height: 160px;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  background-image: url(../images/pattern02.jpg);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+/* line 37, ../sass/styles.scss */
+.logo-title {
+  color: #ffffff;
+  text-shadow: 0px 0px 10px rgba(255, 0, 0, 0.8);
+  font-size: 2.5em;
+  line-height: 1.6em;
+}
+
+/* line 43, ../sass/styles.scss */
+.social-logistica {
+  height: 40px;
+  margin: 5px;
+  margin-top: 60px;
+}
+
+/* line 48, ../sass/styles.scss */
+.gradient-header {
+  background: #f2f6f8;
+  background: -moz-linear-gradient(top, #f2f6f8 0%, #f2f6f8 0%, #f2f6f8 82%, #d3d3d3 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f2f6f8), color-stop(0%, #f2f6f8), color-stop(82%, #f2f6f8), color-stop(100%, #d3d3d3));
+  background: -webkit-linear-gradient(top, #f2f6f8 0%, #f2f6f8 0%, #f2f6f8 82%, #d3d3d3 100%);
+  background: -o-linear-gradient(top, #f2f6f8 0%, #f2f6f8 0%, #f2f6f8 82%, #d3d3d3 100%);
+  background: -ms-linear-gradient(top, #f2f6f8 0%, #f2f6f8 0%, #f2f6f8 82%, #d3d3d3 100%);
+  background: linear-gradient(to bottom, #f2f6f8 0%, #f2f6f8 0%, #f2f6f8 82%, #d3d3d3 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2f6f8', endColorstr='#d3d3d3', GradientType=0);
+  font-family: 'Adamina', serif;
+  border-radius: 0px;
+  font-size: 16px;
+  margin-top: 100px;
+}
+
+/* line 62, ../sass/styles.scss */
+.navbar {
+  border-radius: 0 !important;
+}
+
+/* line 69, ../sass/styles.scss */
+#wrap {
+  min-height: 100%;
+}
+
+/* line 72, ../sass/styles.scss */
+#main {
+  overflow: auto;
+  padding-bottom: 150px;
+  margin-top: 160px;
+}
+
+/* line 78, ../sass/styles.scss */
 .footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   background-image: url("../images/pattern02.jpg");
 }
-/* line 38, ../sass/styles.scss */
+/* line 86, ../sass/styles.scss */
 .footer .text-muted {
   color: #fff;
 }

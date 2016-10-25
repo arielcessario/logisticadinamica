@@ -15,16 +15,16 @@
   ]).config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
     $locationProvider.hashPrefix('!');
 
-    $routeProvider.otherwise({redirectTo: '/view1'});
+    $routeProvider.otherwise({redirectTo: '/main'});
 
-    $routeProvider.when('/view1', {
-      templateUrl: 'view1/view1.html',
-      controller: 'View1Ctrl',
+    $routeProvider.when('/main', {
+      templateUrl: 'main/main.html',
+      controller: 'MainController',
       //data: {requiresLogin: false},
       resolve: { // Any property in resolve should return a promise and is executed before the view is loaded
         loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
           // you can lazy load files for an existing module
-          return $ocLazyLoad.load('view1/view1.js');
+          return $ocLazyLoad.load('main/main.js');
         }]
       }
     });
