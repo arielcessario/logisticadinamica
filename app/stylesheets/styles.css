@@ -1,5 +1,10 @@
 @import "https://fonts.googleapis.com/css?family=Roboto";
-/* line 12, ../sass/styles.scss */
+@font-face {
+  font-family: CursiveStandard;
+  src: url("../fonts/Cursive standard.ttf");
+  font-size: 2.5px;
+}
+/* line 18, ../sass/styles.scss */
 body {
   /* Rectangle: */
   font-family: "Roboto", 'sans-serif';
@@ -11,7 +16,7 @@ body {
   background-size: 100% 100%;
 }
 
-/* line 26, ../sass/styles.scss */
+/* line 32, ../sass/styles.scss */
 .header-logistica {
   height: 156px;
   position: absolute;
@@ -23,7 +28,7 @@ body {
   z-index: 10;
 }
 
-/* line 36, ../sass/styles.scss */
+/* line 42, ../sass/styles.scss */
 .logo-title {
   color: #ffffff;
   text-shadow: 0px 0px 10px rgba(255, 0, 0, 0.8);
@@ -31,14 +36,14 @@ body {
   line-height: 1.6em;
 }
 
-/* line 42, ../sass/styles.scss */
+/* line 48, ../sass/styles.scss */
 .social-logistica {
   height: 40px;
   margin: 5px;
   margin-top: 60px;
 }
 
-/* line 47, ../sass/styles.scss */
+/* line 53, ../sass/styles.scss */
 .gradient-header {
   background: #f2f6f8;
   background: -moz-linear-gradient(top, #f2f6f8 0%, #f2f6f8 0%, #f2f6f8 82%, #d3d3d3 100%);
@@ -54,12 +59,12 @@ body {
   margin-top: 100px;
 }
 
-/* line 61, ../sass/styles.scss */
+/* line 67, ../sass/styles.scss */
 .navbar {
   border-radius: 0 !important;
 }
 
-/* line 64, ../sass/styles.scss */
+/* line 70, ../sass/styles.scss */
 .navbar-nav > li > a {
   color: black !important;
   font-size: 1.2em;
@@ -67,7 +72,13 @@ body {
   text-align: center;
 }
 
-/* line 70, ../sass/styles.scss */
+/* line 76, ../sass/styles.scss */
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #cc3333 !important;
+  text-shadow: 0px 0px 1px #888888 !important;
+}
+
+/* line 80, ../sass/styles.scss */
 .navbar-separator {
   color: #000;
   border-style: solid;
@@ -78,26 +89,55 @@ body {
   border-color: #d3d3d3;
 }
 
-/* line 82, ../sass/styles.scss */
+/* line 92, ../sass/styles.scss */
 #wrap {
   min-height: 100%;
 }
 
-/* line 85, ../sass/styles.scss */
+/* line 95, ../sass/styles.scss */
 #main {
   overflow: auto;
   padding-bottom: 150px;
   margin-top: 180px;
 }
 
-/* line 91, ../sass/styles.scss */
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background-image: url("../images/pattern02.jpg");
+/* line 100, ../sass/styles.scss */
+.panel {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border-radius: 0px !important;
 }
-/* line 99, ../sass/styles.scss */
-.footer .text-muted {
-  color: #fff;
+
+/* line 104, ../sass/styles.scss */
+.panel-default {
+  border-color: #ddd;
+}
+
+/* line 109, ../sass/styles.scss */
+.footer {
+  position: relative;
+  margin-top: -150px;
+  /* negative value of footer height */
+  height: 150px;
+  clear: both;
+  padding-top: 20px;
+  background-image: url("../images/pattern02.jpg");
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.5);
+  z-index: 9;
+  border-style: solid;
+  border-width: 0px;
+}
+
+/* line 121, ../sass/styles.scss */
+.white-footer {
+  height: 40px;
+  margin-top: -20px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* line 126, ../sass/styles.scss */
+.logo-footer {
+  font-family: 'CursiveStandard';
+  color: #ffffff;
+  text-shadow: 0px 0px 10px rgba(255, 0, 0, 0.8);
+  font-size: 2.5em;
 }
