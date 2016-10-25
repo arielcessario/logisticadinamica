@@ -13,7 +13,7 @@ body {
 
 /* line 26, ../sass/styles.scss */
 .header-logistica {
-  height: 160px;
+  height: 156px;
   position: absolute;
   left: 0px;
   right: 0px;
@@ -23,7 +23,7 @@ body {
   z-index: 10;
 }
 
-/* line 37, ../sass/styles.scss */
+/* line 36, ../sass/styles.scss */
 .logo-title {
   color: #ffffff;
   text-shadow: 0px 0px 10px rgba(255, 0, 0, 0.8);
@@ -31,14 +31,14 @@ body {
   line-height: 1.6em;
 }
 
-/* line 43, ../sass/styles.scss */
+/* line 42, ../sass/styles.scss */
 .social-logistica {
   height: 40px;
   margin: 5px;
   margin-top: 60px;
 }
 
-/* line 48, ../sass/styles.scss */
+/* line 47, ../sass/styles.scss */
 .gradient-header {
   background: #f2f6f8;
   background: -moz-linear-gradient(top, #f2f6f8 0%, #f2f6f8 0%, #f2f6f8 82%, #d3d3d3 100%);
@@ -54,31 +54,50 @@ body {
   margin-top: 100px;
 }
 
-/* line 62, ../sass/styles.scss */
+/* line 61, ../sass/styles.scss */
 .navbar {
   border-radius: 0 !important;
 }
 
-/* line 69, ../sass/styles.scss */
+/* line 64, ../sass/styles.scss */
+.navbar-nav > li > a {
+  color: black !important;
+  font-size: 1.2em;
+  width: 150px;
+  text-align: center;
+}
+
+/* line 70, ../sass/styles.scss */
+.navbar-separator {
+  color: #000;
+  border-style: solid;
+  border-bottom: 0px;
+  border-top: 0px;
+  border-left-width: 1px;
+  border-right-width: 0px;
+  border-color: #d3d3d3;
+}
+
+/* line 82, ../sass/styles.scss */
 #wrap {
   min-height: 100%;
 }
 
-/* line 72, ../sass/styles.scss */
+/* line 85, ../sass/styles.scss */
 #main {
   overflow: auto;
   padding-bottom: 150px;
-  margin-top: 160px;
+  margin-top: 180px;
 }
 
-/* line 78, ../sass/styles.scss */
+/* line 91, ../sass/styles.scss */
 .footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   background-image: url("../images/pattern02.jpg");
 }
-/* line 86, ../sass/styles.scss */
+/* line 99, ../sass/styles.scss */
 .footer .text-muted {
   color: #fff;
 }
