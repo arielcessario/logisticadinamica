@@ -104,7 +104,10 @@ body {
 .panel-default {
   border-color: #ddd;
 }
-
+.panel2 {
+  background-image: url(../images/pattern02.jpg);
+  border-radius: 0px;
+}
 
 .footer {
   position: relative;
@@ -151,7 +154,7 @@ body {
 
   #main {
     padding-bottom: 320px;
-    margin-top: 220px;
+    margin-top: 235px;
   }
 
   .footer {
