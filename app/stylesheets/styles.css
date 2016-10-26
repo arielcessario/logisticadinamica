@@ -141,3 +141,60 @@ body {
   text-shadow: 0px 0px 10px rgba(255, 0, 0, 0.8);
   font-size: 2.5em;
 }
+
+@media (max-width: 759px) {
+  /* line 138, ../sass/styles.scss */
+  .logo-title {
+    font-size: 1.4em;
+    margin-left: calc(40% - 4em);
+  }
+
+  /* line 143, ../sass/styles.scss */
+  .white-Footer {
+    margin-left: -50px;
+    margin-right: -50px;
+  }
+
+  /* line 148, ../sass/styles.scss */
+  .wrap {
+    min-height: 100%;
+  }
+
+  /* line 152, ../sass/styles.scss */
+  #main {
+    padding-bottom: 320px;
+    margin-top: 220px;
+  }
+
+  /* line 157, ../sass/styles.scss */
+  .footer {
+    margin-top: -320px;
+    height: 320px;
+  }
+
+  /* line 162, ../sass/styles.scss */
+  .header-logistica {
+    height: 210px;
+  }
+
+  /* line 166, ../sass/styles.scss */
+  .gradient-header {
+    margin-top: 170px;
+  }
+
+  /* line 171, ../sass/styles.scss */
+  .social-header {
+    margin-top: -70px;
+    margin-left: calc(40% - 5em);
+  }
+
+  /* line 176, ../sass/styles.scss */
+  .logo-media {
+    margin-left: calc(40% - 5em);
+  }
+
+  /* line 180, ../sass/styles.scss */
+  .navbar-default .navbar-nav {
+    background-color: #ffffff;
+  }
+}

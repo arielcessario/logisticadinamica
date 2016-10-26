@@ -129,3 +129,57 @@ body {
   text-shadow: 0px 0px 10px rgba(255, 0, 0, 0.8);
   font-size: 2.5em;
 }
+
+
+
+
+@media (max-width: 759px) {
+
+  .logo-title {
+    font-size: 1.4em;
+    margin-left: calc(40% - 4em);
+  }
+
+  .white-Footer {
+    margin-left: -50px;
+    margin-right: -50px;
+  }
+
+  .wrap {
+    min-height: 100%;
+  }
+
+  #main {
+    padding-bottom: 320px;
+    margin-top: 220px;
+  }
+
+  .footer {
+    margin-top: -320px;
+    height: 320px;
+  }
+
+  .header-logistica {
+    height: 210px;
+  }
+
+  .gradient-header {
+    //margin-top: 40px;
+    margin-top: 170px;
+  }
+
+  .social-header {
+    margin-top: -70px;
+    margin-left: calc(40% - 5em);
+  }
+
+  .logo-media{
+    margin-left: calc(40% - 5em);
+  }
+
+  .navbar-default .navbar-nav {
+    background-color: #ffffff;
+  }
+
+
+}
