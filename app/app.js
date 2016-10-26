@@ -10,6 +10,7 @@
     'angular-jwt',
     'auth0',
     'acUtils',
+    'acContacts',
     'acUsuarios',
     'LangTables'
   ]).config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
