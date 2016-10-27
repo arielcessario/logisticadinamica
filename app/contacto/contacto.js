@@ -27,7 +27,7 @@
             }
             vm.enviando = true;
 
-            ContactsService.sendMail(vm.email,
+            ContactsService.sendMail(vm.mail,
                 [{mail: 'arielcessario@gmail.com'}, {mail: 'mmaneff@gmail.com'}, {mail: 'diegoyankelevich@gmail.com'}],
                 vm.nombre,
                 vm.asunto,
@@ -37,7 +37,7 @@
                     console.log(result);
                     vm.enviando = false;
 
-                    vm.email = '';
+                    vm.mail = '';
                     vm.nombre = '';
                     vm.asunto = '';
                     vm.mensaje = '';
