@@ -1,14 +1,36 @@
-@import "https://fonts.googleapis.com/css?family=Roboto";
-@font-face {
-  font-family: CursiveStandard;
-  src: url("../fonts/Cursive standard.ttf");
-  font-size: 2.5px;
+@import url("https://fonts.googleapis.com/css?family=Alegreya+Sans:300,300i,400,400i,700,700i");
+@import url("https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:500,500i,700,700i");
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
-/* line 18, ../sass/styles.scss */
+@keyframes fadeInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* line 41, ../sass/styles.scss */
+html {
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+/* line 46, ../sass/styles.scss */
 body {
   /* Rectangle: */
-  font-family: "Roboto", 'sans-serif';
   height: 100%;
+  font-family: 'Alegreya Sans', sans-serif;
   width: 100%;
   background-image: url("../images/fondo01.jpg");
   background-repeat: no-repeat;
@@ -16,9 +38,9 @@ body {
   background-size: 100% 100%;
 }
 
-/* line 32, ../sass/styles.scss */
+/* line 59, ../sass/styles.scss */
 .header-logistica {
-  height: 156px;
+  max-height: 100px;
   position: absolute;
   left: 0px;
   right: 0px;
@@ -28,7 +50,7 @@ body {
   z-index: 10;
 }
 
-/* line 42, ../sass/styles.scss */
+/* line 69, ../sass/styles.scss */
 .logo-title {
   color: #ffffff;
   text-shadow: 0px 0px 10px rgba(255, 0, 0, 0.8);
@@ -36,14 +58,14 @@ body {
   line-height: 1.6em;
 }
 
-/* line 48, ../sass/styles.scss */
+/* line 75, ../sass/styles.scss */
 .social-logistica {
   height: 40px;
   margin: 5px;
   margin-top: 60px;
 }
 
-/* line 53, ../sass/styles.scss */
+/* line 80, ../sass/styles.scss */
 .gradient-header {
   background: #f2f6f8;
   background: -moz-linear-gradient(top, #f2f6f8 0%, #f2f6f8 0%, #f2f6f8 82%, #d3d3d3 100%);
@@ -53,32 +75,33 @@ body {
   background: -ms-linear-gradient(top, #f2f6f8 0%, #f2f6f8 0%, #f2f6f8 82%, #d3d3d3 100%);
   background: linear-gradient(to bottom, #f2f6f8 0%, #f2f6f8 0%, #f2f6f8 82%, #d3d3d3 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2f6f8', endColorstr='#d3d3d3', GradientType=0);
-  font-family: 'Adamina', serif;
+  font-family: 'Alegreya Sans SC', sans-serif;
   border-radius: 0px;
   font-size: 16px;
   margin-top: 100px;
 }
 
-/* line 67, ../sass/styles.scss */
+/* line 94, ../sass/styles.scss */
 .navbar {
   border-radius: 0 !important;
 }
 
-/* line 70, ../sass/styles.scss */
+/* line 97, ../sass/styles.scss */
 .navbar-nav > li > a {
+  font-family: 'Alegreya Sans SC', sans-serif;
   color: black !important;
-  font-size: 1.2em;
+  font-size: 1.4em;
   width: 150px;
   text-align: center;
 }
 
-/* line 76, ../sass/styles.scss */
+/* line 104, ../sass/styles.scss */
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
   color: #cc3333 !important;
   text-shadow: 0px 0px 1px #888888 !important;
 }
 
-/* line 80, ../sass/styles.scss */
+/* line 108, ../sass/styles.scss */
 .navbar-separator {
   color: #000;
   border-style: solid;
@@ -89,118 +112,471 @@ body {
   border-color: #d3d3d3;
 }
 
-/* line 92, ../sass/styles.scss */
+/* line 120, ../sass/styles.scss */
 #wrap {
   min-height: 100%;
 }
 
-/* line 95, ../sass/styles.scss */
+/* line 123, ../sass/styles.scss */
 #main {
   overflow: auto;
-  padding-bottom: 150px;
-  margin-top: 180px;
+  padding-bottom: 80px;
+  margin-top: 230px;
 }
 
-/* line 100, ../sass/styles.scss */
+/* line 129, ../sass/styles.scss */
 .panel {
-  background-color: rgba(255, 255, 255, 0.95) !important;
-  border-radius: 0px !important;
+  border-radius: 10px !important;
+  margin-bottom: 0 !important;
+  background-color: transparent !important;
 }
 
-/* line 104, ../sass/styles.scss */
-.panel-default {
-  border-color: #ddd;
-}
-
-/* line 107, ../sass/styles.scss */
+/* line 136, ../sass/styles.scss */
 .panel2 {
   background-image: url(../images/pattern02.jpg);
   border-radius: 0px;
 }
 
-/* line 112, ../sass/styles.scss */
+/* line 141, ../sass/styles.scss */
 .footer {
-  position: relative;
-  margin-top: -150px;
-  /* negative value of footer height */
-  height: 150px;
+  position: absolute;
+  width: 100%;
+  height: 100px;
   clear: both;
-  padding-top: 20px;
-  background-image: url("../images/pattern02.jpg");
+  padding-top: 25px;
+  background-image: url(../images/pattern02.jpg);
   box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.5);
   z-index: 9;
   border-style: solid;
   border-width: 0px;
 }
 
-/* line 124, ../sass/styles.scss */
-.white-footer {
-  height: 40px;
-  margin-top: -20px;
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-/* line 129, ../sass/styles.scss */
+/* line 154, ../sass/styles.scss */
 .logo-footer {
-  font-family: 'CursiveStandard';
+  font-family: 'Alegreya Sans SC', sans-serif;
   color: #ffffff;
   text-shadow: 0px 0px 10px rgba(255, 0, 0, 0.8);
   font-size: 2.5em;
 }
 
 @media (max-width: 759px) {
-  /* line 141, ../sass/styles.scss */
+  /* line 166, ../sass/styles.scss */
   .logo-title {
     font-size: 1.4em;
     margin-left: calc(40% - 4em);
   }
 
-  /* line 146, ../sass/styles.scss */
+  /* line 171, ../sass/styles.scss */
   .white-Footer {
     margin-left: -50px;
     margin-right: -50px;
   }
 
-  /* line 151, ../sass/styles.scss */
+  /* line 176, ../sass/styles.scss */
   .wrap {
     min-height: 100%;
   }
 
-  /* line 155, ../sass/styles.scss */
+  /* line 180, ../sass/styles.scss */
   #main {
     padding-bottom: 320px;
-    margin-top: 235px;
   }
 
-  /* line 160, ../sass/styles.scss */
+  /* line 184, ../sass/styles.scss */
   .footer {
     margin-top: -320px;
     height: 320px;
   }
 
-  /* line 165, ../sass/styles.scss */
+  /* line 189, ../sass/styles.scss */
   .header-logistica {
     height: 210px;
   }
-
-  /* line 169, ../sass/styles.scss */
-  .gradient-header {
-    margin-top: 170px;
+  /* line 191, ../sass/styles.scss */
+  .header-logistica span {
+    color: black !important;
+  }
+  /* line 194, ../sass/styles.scss */
+  .header-logistica .container-fluid {
+    background-color: white;
   }
 
-  /* line 174, ../sass/styles.scss */
+  /* line 199, ../sass/styles.scss */
+  .gradient-header {
+    margin-top: 199px;
+  }
+
+  /* line 203, ../sass/styles.scss */
   .social-header {
     margin-top: -70px;
     margin-left: calc(40% - 5em);
   }
 
-  /* line 179, ../sass/styles.scss */
+  /* line 208, ../sass/styles.scss */
   .logo-media {
     margin-left: calc(40% - 5em);
   }
 
-  /* line 183, ../sass/styles.scss */
+  /* line 212, ../sass/styles.scss */
   .navbar-default .navbar-nav {
     background-color: #ffffff;
+  }
+}
+/* line 219, ../sass/styles.scss */
+.textos-secundarios-titulo {
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 3vw;
+  text-align: left;
+  font-weight: 900;
+  color: black;
+}
+@media (max-width: 1000px) {
+  /* line 219, ../sass/styles.scss */
+  .textos-secundarios-titulo {
+    font-size: 5vw;
+    line-height: 7vw;
+  }
+}
+@media (max-width: 500px) {
+  /* line 219, ../sass/styles.scss */
+  .textos-secundarios-titulo {
+    font-size: 30px;
+    line-height: 35px;
+  }
+}
+
+/* line 235, ../sass/styles.scss */
+.textos-secundarios {
+  color: black;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 25px;
+  margin-left: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* line 244, ../sass/styles.scss */
+.bullets {
+  font-size: 1.3vw !important;
+}
+@media (max-width: 1100px) {
+  /* line 244, ../sass/styles.scss */
+  .bullets {
+    font-size: 2.3vw !important;
+  }
+}
+@media (max-width: 700px) {
+  /* line 244, ../sass/styles.scss */
+  .bullets {
+    font-size: 4.3vw !important;
+  }
+}
+
+/* line 253, ../sass/styles.scss */
+.contenedor-flex-deposito {
+  margin: 10px;
+  -webkit-border-radius: 10px;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f7f7f7+100 */
+  background: white;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, white 0%, #f7f7f7 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, white 0%, #f7f7f7 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #ffffff 0%, #f7f7f7 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f7f7f7',GradientType=0 );
+  /* IE6-9 */
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+}
+
+/* line 268, ../sass/styles.scss */
+.contenedor-img-flex-deposito {
+  width: 100%;
+  height: 200px;
+  min-height: 267px;
+  overflow: hidden;
+}
+
+/* line 275, ../sass/styles.scss */
+.contenedor-texto-flex-deposito {
+  padding: 15px;
+  width: 100%;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 20px;
+}
+@media (max-width: 770px) {
+  /* line 275, ../sass/styles.scss */
+  .contenedor-texto-flex-deposito {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
+
+/* line 286, ../sass/styles.scss */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (max-width: 700px) {
+  /* line 286, ../sass/styles.scss */
+  .flex {
+    flex-direction: column;
+  }
+}
+
+/* line 295, ../sass/styles.scss */
+.flex-box {
+  font-family: 'Alegreya Sans', sans-serif;
+  padding: 15px;
+}
+
+/* line 300, ../sass/styles.scss */
+.textos-primarios {
+  color: #cc3333;
+  font-size: 3.5vw;
+  line-height: 3.2vw;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+@media (max-width: 770px) {
+  /* line 300, ../sass/styles.scss */
+  .textos-primarios {
+    font-size: 6vw;
+    line-height: 6.2vw;
+  }
+}
+
+/* line 313, ../sass/styles.scss */
+p {
+  margin: 0 !important;
+}
+
+/* line 317, ../sass/styles.scss */
+.bullets-animate {
+  -webkit-animation: fadeInLeft 2s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadeInLeft 2s;
+  /* Firefox < 16 */
+  -ms-animation: fadeInLeft 2s;
+  /* Internet Explorer */
+  -o-animation: fadeInLeft 2s;
+  /* Opera < 12.1 */
+  animation: fadeInLeft 2s;
+}
+
+/* line 324, ../sass/styles.scss */
+.servicios-animate {
+  -webkit-animation: fadeInTop 2s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadeInTop 2s;
+  /* Firefox < 16 */
+  -ms-animation: fadeInTop 2s;
+  /* Internet Explorer */
+  -o-animation: fadeInTop 2s;
+  /* Opera < 12.1 */
+  animation: fadeInTop 2s;
+}
+
+/* line 332, ../sass/styles.scss */
+.texto-regular {
+  font-weight: 500 !important;
+  font-size: 23px !important;
+  text-transform: none !important;
+  font-family: 'Alegreya Sans', sans-serif;
+}
+@media (max-width: 740px) {
+  /* line 332, ../sass/styles.scss */
+  .texto-regular {
+    font-size: 18px !important;
+    line-height: 22px !important;
+  }
+}
+
+/* line 343, ../sass/styles.scss */
+.flex-servicios-contenedor {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+/* line 347, ../sass/styles.scss */
+.flex-servicios-contenedor img {
+  margin-top: 6px;
+}
+
+/* line 353, ../sass/styles.scss */
+.flex-servicios-cuadro {
+  min-width: 320px;
+  flex: 5;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,e5e5e5+100;White+3D */
+  background: white;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, white 0%, #e5e5e5 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, white 0%, #e5e5e5 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 );
+  /* IE6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3e2c7', endColorstr='#e9d4b3', GradientType=1 );
+  max-width: 100%;
+  margin: 10px;
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+  -webkit-border-radius: 5px;
+  padding-bottom: 20px;
+  -webkit-border-radius: 5px;
+}
+/* line 372, ../sass/styles.scss */
+.flex-servicios-cuadro .textos-secundarios-titulo-servicios {
+  font-family: 'Alegreya Sans SC', sans-serif;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a81d10+0,a51003+100 */
+  background: #a81d10;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #a81d10 0%, #a51003 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #a81d10 0%, #a51003 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #a81d10 0%, #a51003 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a81d10', endColorstr='#a51003',GradientType=0 );
+  /* IE6-9 */
+  padding: 10px;
+  font-size: 2vw;
+  padding: 10px;
+  line-height: 2vw;
+  color: white;
+  margin-bottom: 20px !important;
+}
+@media (max-width: 1100px) {
+  /* line 372, ../sass/styles.scss */
+  .flex-servicios-cuadro .textos-secundarios-titulo-servicios {
+    font-size: 3vw;
+    line-height: 2.7vw;
+  }
+}
+@media (max-width: 800px) {
+  /* line 372, ../sass/styles.scss */
+  .flex-servicios-cuadro .textos-secundarios-titulo-servicios {
+    font-size: 7vw;
+    line-height: 6vw;
+  }
+}
+/* line 395, ../sass/styles.scss */
+.flex-servicios-cuadro .panel-body {
+  padding: 0 !important;
+}
+
+/* line 400, ../sass/styles.scss */
+.panel-body-3 {
+  z-index: 0;
+  background: #f3e2c7;
+  background: -moz-linear-gradient(45deg, #f3e2c7 0%, #e9d4b3 100%);
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, #f3e2c7), color-stop(100%, #e9d4b3));
+  background: -webkit-linear-gradient(45deg, #f3e2c7 0%, #e9d4b3 100%);
+  background: -o-linear-gradient(45deg, #f3e2c7 0%, #e9d4b3 100%);
+  background: -ms-linear-gradient(45deg, #f3e2c7 0%, #e9d4b3 100%);
+  background: linear-gradient(45deg, #f3e2c7 0%, #e9d4b3 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3e2c7', endColorstr='#e9d4b3', GradientType=1 );
+}
+
+/* line 412, ../sass/styles.scss */
+.box-bullets {
+  background: -moz-linear-gradient(45deg, #f3e2c7 0%, #e9d4b3 100%);
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, #f3e2c7), color-stop(100%, #e9d4b3));
+  background: -webkit-linear-gradient(45deg, #f3e2c7 0%, #e9d4b3 100%);
+  background: -o-linear-gradient(45deg, #f3e2c7 0%, #e9d4b3 100%);
+  background: -ms-linear-gradient(45deg, #f3e2c7 0%, #e9d4b3 100%);
+  background: linear-gradient(45deg, #f3e2c7 0%, #e9d4b3 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3e2c7', endColorstr='#e9d4b3', GradientType=1 );
+  border-top-right-radius: 10px;
+}
+
+/* line 423, ../sass/styles.scss */
+.titulo-contacto {
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 47px;
+  font-weight: 800;
+  color: #D83D00;
+  z-index: 1000;
+}
+
+/* line 435, ../sass/styles.scss */
+.contacto label {
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+}
+/* line 441, ../sass/styles.scss */
+.contacto button {
+  font-family: 'Alegreya Sans', sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+}
+/* line 446, ../sass/styles.scss */
+.contacto input {
+  font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+/* line 451, ../sass/styles.scss */
+.panel-default {
+  border-color: transparent !important;
+}
+
+/* line 455, ../sass/styles.scss */
+.titulos-secciones {
+  margin-top: 6%;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-weight: 800;
+  position: absolute;
+  top: 0;
+  left: 0%;
+  font-size: 4vw;
+  z-index: 1;
+  margin-left: 3%;
+  color: white;
+}
+
+/* line 468, ../sass/styles.scss */
+strong {
+  font-size: 23px;
+}
+@media (max-width: 1100px) {
+  /* line 468, ../sass/styles.scss */
+  strong {
+    font-size: 3vw;
+    line-height: 4vw;
+  }
+}
+@media (max-width: 740px) {
+  /* line 468, ../sass/styles.scss */
+  strong {
+    font-size: 21px;
+    line-height: 23px;
+  }
+}
+
+/* line 480, ../sass/styles.scss */
+.titulo-deposito {
+  font-size: 2vw;
+  color: #cc3333;
+}
+@media (max-width: 1100px) {
+  /* line 480, ../sass/styles.scss */
+  .titulo-deposito {
+    font-size: 3.5vw;
+    line-height: 4vw;
+  }
+}
+@media (max-width: 700px) {
+  /* line 480, ../sass/styles.scss */
+  .titulo-deposito {
+    font-size: 40px;
+    line-height: 44px;
   }
 }
