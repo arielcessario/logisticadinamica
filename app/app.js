@@ -10,6 +10,7 @@
     'angular-jwt',
     'auth0',
     'acUtils',
+    'acAnimate',
     'acContacts',
     'acUsuarios',
     'LangTables'
@@ -96,7 +97,7 @@
   AppCtrl.$inject = ['$scope'];
   function AppCtrl($scope) {
 
-    //EL MENÚ bootstrap LO SAQUE DE ESTA URL
+    //EL MENï¿½ bootstrap LO SAQUE DE ESTA URL
     //https://jsfiddle.net/7z8hLuyu/
     //http://stackoverflow.com/questions/14741988/twitter-bootstrap-navbar-with-angularjs-collapse-not-functioning
 
